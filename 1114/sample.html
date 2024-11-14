@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>p5.js</title>
+  <style>
+    canvas {
+      background: #ddd;
+      border: 1px solid #aaa;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.js"></script>
+  <script>
+    //ページ読み込み時に1度だけ実行される関数
+    function setup() {
+      //canvas要素の生成
+      createCanvas(640, 480);
+      // point(100, 200);
+      // line(10, 10, 200, 180);
+      // rect(100, 200, 200, 100);
+      // ellipse(100, 200, 200, 180);
+      // triangle(200, 200, 200, 300, 300, 400);
+      background(0, 255, 255, 255);
+
+      fill(255, 207, 145);
+      ellipse(320, 240, 100, 100);
+
+      fill(148, 124, 93);
+      rect(250, 290, 140, 80);
+
+      fill(153, 148, 142);
+      triangle(320, 120, 250, 190, 390, 190);
+
+      line(320, 370, 320, 420);
+    }
+
+    //ページを表示している間、ずっと繰り返し実行される関数
+    function draw() {
+      console.log('draw!');
+    }
+  </script>
+</body>
+</html>
