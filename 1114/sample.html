@@ -32,11 +32,12 @@
       x = mouseX;
       y = mouseY;
       color = floor(random(0, 100));
-      d = floor(random(10, 100));
+      // d = floor(random(10, 100));
+      d = dist(mouseX, mouseY, pmouseX, pmouseY);
       noStroke();
       fill(h, 50, color, 0.2);
       if (mouseIsPressed) {
-        ellipse(x, y, d, d);
+        ellipse(x, y, d * 2, d * 2);
       }
     }
 
