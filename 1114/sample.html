@@ -17,6 +17,7 @@
     let y = 0;
     let color = 0;
     let d = 0;
+    let h = 100;
 
     function setup() {
       createCanvas(640, 480);
@@ -33,7 +34,7 @@
       color = floor(random(0, 100));
       d = floor(random(10, 100));
       noStroke();
-      fill(100, 50, color, 0.2);
+      fill(h, 50, color, 0.2);
       if (mouseIsPressed) {
         ellipse(x, y, d, d);
       }
@@ -46,7 +47,7 @@
     }
 
     function mouseReleased() {
-
+      h = floor(random(0, 360));
     }
   </script>
 </body>
