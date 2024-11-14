@@ -15,6 +15,8 @@
   <script>
     let x = 0;
     let y = 0;
+    let color = 0;
+    let d = 0;
 
     function setup() {
       createCanvas(640, 480);
@@ -23,10 +25,14 @@
     }
 
     function draw() {
-      clear();
+      // clear();
       x = floor(random(0, 640));
       y = floor(random(0, 480));
-      rect(x, y, 50, 50);
+      color = floor(random(0, 100));
+      d = floor(random(10, 100));
+      noStroke();
+      fill(100, 50, color, 0.2);
+      rect(x, y, d, d);
     }
   </script>
 </body>
