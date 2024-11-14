@@ -13,28 +13,20 @@
 <body>
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.js"></script>
   <script>
-    //ページ読み込み時に1度だけ実行される関数
+    let x = 0;
+    let y = 0;
+
     function setup() {
       createCanvas(640, 480);
       colorMode(HSL);
-
-      background(180, 50, 50);
-
-      fill(34, 79, 81);
-      ellipse(320, 240, 100, 100);
-
-      fill(34, 23, 62);
-      rect(250, 290, 140, 80);
-
-      fill(34, 12, 73);
-      triangle(320, 120, 250, 190, 390, 190);
-
-      line(320, 370, 320, 420);
+      rectMode(CENTER);
     }
 
-    //ページを表示している間、ずっと繰り返し実行される関数
     function draw() {
-      console.log('draw!');
+      clear();
+      x = floor(random(0, 640));
+      y = floor(random(0, 480));
+      rect(x, y, 50, 50);
     }
   </script>
 </body>
