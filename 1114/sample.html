@@ -26,13 +26,27 @@
 
     function draw() {
       // clear();
-      x = floor(random(0, 640));
-      y = floor(random(0, 480));
+      // x = floor(random(0, width));
+      // y = floor(random(0, height));
+      x = mouseX;
+      y = mouseY;
       color = floor(random(0, 100));
       d = floor(random(10, 100));
       noStroke();
       fill(100, 50, color, 0.2);
-      rect(x, y, d, d);
+      if (mouseIsPressed) {
+        ellipse(x, y, d, d);
+      }
+    }
+
+    function keyReleased() {
+      if (keyCode === 32) {
+        clear();
+      }
+    }
+
+    function mouseReleased() {
+
     }
   </script>
 </body>
